@@ -15,7 +15,7 @@ docker run -it --rm \
 -v ~/Home/Tools/Keyboard/firmware:/firmware \
 zmkfirmware/zmk-build-arm:4.1-branch /bin/bash
 
-west init -l config && west updates
+west init -l config && west update
 west zephyr-export
 
 
