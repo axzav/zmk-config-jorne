@@ -6,7 +6,7 @@ This is the official Jorne config for the ZMK keymap editor
 * Keymap editor source code: https://github.com/nickcoutsos/keymap-editor
 * Also see https://github.com/joric/nrfmicro/wiki
 
-
+**Local build:**
 ```shell
 docker run -it --rm \
 --security-opt label=disable \
