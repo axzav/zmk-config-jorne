@@ -1,10 +1,11 @@
-# zmk-config-jorne
+# Jorne ZMK config
 
-This is the official Jorne config for the ZMK keymap editor
+**Inspired by:**
+- https://github.com/manna-harbour/miryoku_zmk
+- https://github.com/urob/zmk-config
 
-* This config was built with: https://nickcoutsos.github.io/keymap-editor (use it to modify keymap)
-* Keymap editor source code: https://github.com/nickcoutsos/keymap-editor
-* Also see https://github.com/joric/nrfmicro/wiki
+**Keymap editor:**
+https://nickcoutsos.github.io/keymap-editor
 
 **Local build:**
 ```shell
