@@ -17,12 +17,21 @@
     keymap {
         compatible = "zmk,keymap";
 
-        MAIN_MAC {
+        BASE {
             bindings = <
-&none  &none  &kp Q  &kp W  &kp E       &kp R      &kp T    &kp Y      &kp U          &kp I           &kp O    &kp P     &none  &none
-       &none  &kp A  &kp S  &kp D       &kp F      &kp G    &kp H      &kp J          &kp K           &kp L    &kp SEMI  &none
-       &none  &kp Z  &kp X  &kp C       &kp V      &kp B    &kp N      &kp M          &kp COMMA       &kp DOT  &kp FSLH  &none
-                            &kp ESCAPE  &kp SPACE  &kp TAB  &kp ENTER  &kp BACKSPACE  &sk LEFT_SHIFT
+&none  &none  &kp Q  &kp W  &kp E       &kp R      &kp T    &kp Y      &kp U            &kp I           &kp O    &kp P     &none  &none
+       &none  &kp A  &kp S  &kp D       &kp F      &kp G    &kp H      &kp J            &kp K           &kp L    &kp SEMI  &none
+       &none  &kp Z  &kp X  &kp C       &kp V      &kp B    &kp N      &kp M            &kp COMMA       &kp DOT  &kp FSLH  &none
+                            &kp ESCAPE  &kp SPACE  &kp TAB  &kp ENTER  &lt 1 BACKSPACE  &sk LEFT_SHIFT
+            >;
+        };
+
+        SYM {
+            bindings = <
+&trans  &kp COMMA    &kp DOT            &kp QUESTION   &kp EXCLAMATION  &kp COLON         &kp SEMICOLON  &kp SLASH       &kp BACKSLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOT  &kp DOT  &trans
+        &kp SQT      &kp DOUBLE_QUOTES  &kp HASH       &kp ASTERISK     &kp GRAVE         &kp TILDE      &kp PLUS        &kp MINUS      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOT  &kp DOT
+        &kp PERCENT  &kp CARET          &kp AMPERSAND  &kp LESS_THAN    &kp GREATER_THAN  &kp PIPE       &kp UNDERSCORE  &kp DOT        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOT  &kp DOT
+                                                       &trans           &trans            &trans         &trans          &trans         &trans
             >;
         };
 
@@ -31,7 +40,7 @@
 &trans  &kp UNDER       &kp F1    &kp F2  &kp F3     &kp F4    &kp F5     &kp F6     &kp F7    &kp F8     &kp F9    &kp F10   &kp F11          &mt RGUI F12
         &mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH   &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR  &mt RCTRL MINUS
         &mt LALT EQUAL  &kp N1    &kp N2  &kp N3     &kp N4    &kp N5     &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
-                                          &lt 3 TAB  &trans    &trans     &trans     &trans    &lt 3 DEL
+                                          &lt 4 TAB  &trans    &trans     &trans     &trans    &lt 4 DEL
             >;
         };
 
@@ -40,7 +49,7 @@
 &trans  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CAPS         &trans
         &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
         &trans           &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &trans
-                                                     &trans     &trans     &lt 3 RET     &lt 3 ESC     &trans    &trans
+                                                     &trans     &trans     &lt 4 RET     &lt 4 ESC     &trans    &trans
             >;
         };
 
@@ -50,6 +59,24 @@
             &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
             &none        &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &none
                                                      &trans        &none         &trans        &trans        &none         &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
